@@ -1,0 +1,13 @@
+#include <stdbool.h>
+
+typedef struct nodo
+{
+    char nome[100];
+    bool diretorio; // define se é pasta ou arquivo: true = pasta / false = arquivo
+    struct Nodo *pai;
+    struct Nodo *filho;
+    struct Nodo *irmao;
+
+} Nodo;
+
+Nodo* criarNodo(Nodo *p, bool diretorio); // passa o nó e se é pasta ou arquivos
