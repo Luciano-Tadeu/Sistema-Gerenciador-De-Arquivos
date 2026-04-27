@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <stdbool.h>
 #include <string.h>
+#include "tree.h"
 
 typedef struct{
     char digitado[100];
@@ -27,8 +28,8 @@ int main(void){
         //Inserir função que printa o caminho
         lerComando(c);
         if(strcmp(c->com, "ls") == 0) printf("ls\n"); //Inserir funções no local do printf.
-        else if(strcmp(c->com, "ma") == 0) printf("ma\n");
-        else if(strcmp(c->com, "mp") == 0) printf("mp\n");
+        else if(strcmp(c->com, "ma") == 0); //comando_ma(pasta_atual, c->arg); como nao tem "pasta atual" deixei comentado
+        else if(strcmp(c->com, "mp") == 0); //comando_mp(pasta_atual, c->arg); como nao tem "pasta atual" deixei comentado
         else if(strcmp(c->com, "cd") == 0) printf("cd\n");
         else if(strcmp(c->com, "rm") == 0) printf("rm\n");
         else if(strcmp(c->com, "ex") == 0) printf("sistema encerrado\n"); //Puxar função para libertar a memória.
