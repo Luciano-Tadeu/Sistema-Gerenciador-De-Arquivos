@@ -1,0 +1,11 @@
+comando invalido
+->->->->->
+1.txt
+2-
+3.exe
+4-
+->-4->-4->-4->->->
+1.txt
+2-
+4-
+->sistema encerrado
