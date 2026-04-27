@@ -22,7 +22,7 @@ Nodo *criarNodo(Nodo *pasta_atual, bool diretorio, char* nome)
     novo->irmao = NULL;
 
     return novo;
-};
+}
 
 void inserir(Nodo *pasta_atual, Nodo *arquivo)
 {
