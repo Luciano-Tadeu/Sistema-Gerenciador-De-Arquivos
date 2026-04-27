@@ -5,7 +5,7 @@
 
 typedef struct{
     char digitado[100];
-    char com[3];
+    char com[100];
     char arg[100];
 } COMANDO;
 
@@ -13,7 +13,7 @@ typedef struct{
 void lerComando(COMANDO* c){
     fgets(c->digitado, sizeof(c->digitado), stdin);
     c->digitado[strcspn(c->digitado, "\n\r")] = '\0';
-    sscanf(c->digitado, "%2s %s", c->com, c->arg);
+    sscanf(c->digitado, "%[^ ] %[^ ]", c->com, c->arg);
 }
 
 
@@ -31,7 +31,7 @@ int main(void){
         else if(strcmp(c->com, "mp") == 0) printf("mp\n");
         else if(strcmp(c->com, "cd") == 0) printf("cd\n");
         else if(strcmp(c->com, "rm") == 0) printf("rm\n");
-        else if(strcmp(c->com, "ex") == 0); //Puxar função para libertar a memória.
+        else if(strcmp(c->com, "ex") == 0) printf("sistema encerrado\n"); //Puxar função para libertar a memória.
         else printf("comando invalido\n");
     } while (strcmp(c->com, "ex") != 0);
     
