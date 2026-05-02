@@ -27,20 +27,19 @@ int main(void){
 
     do
     {
-        //Inserir função que printa o caminho
+        imprimir_caminho(pasta_atual);
         lerComando(c);
-        if(strcmp(c->com, "ls") == 0) printf("ls\n"); //Inserir funções no local do printf.
+        if(strcmp(c->com, "ls") == 0) comando_ls(pasta_atual);
         else if(strcmp(c->com, "ma") == 0) comando_ma(pasta_atual, c->arg);
         else if(strcmp(c->com, "mp") == 0) comando_mp(pasta_atual, c->arg);
-        else if(strcmp(c->com, "cd") == 0) printf("cd\n");
-        else if(strcmp(c->com, "rm") == 0) printf("rm\n");
-        else if(strcmp(c->com, "ex") == 0) printf("sistema encerrado\n"); //Puxar função para libertar a memória.
+        else if(strcmp(c->com, "cd") == 0) pasta_atual = comando_cd(pasta_atual, c->arg);
+        else if(strcmp(c->com, "rm") == 0) comando_rm(pasta_atual, c->arg);
+        else if(strcmp(c->com, "ex") == 0) printf("sistema encerrado\n");
         else printf("comando invalido\n");
-        printf("%p, %p", pasta_atual->filho, pasta_atual->filho->irmao);
     } while (strcmp(c->com, "ex") != 0);
     
 
-
+    free_tree(raiz);
     free(c);
     return 0;
 }
