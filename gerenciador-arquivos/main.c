@@ -12,6 +12,8 @@ typedef struct{
 
 
 void lerComando(COMANDO* c){
+    c->com[0] = '\0';
+    c->arg[0] = '\0';
     fgets(c->digitado, sizeof(c->digitado), stdin);
     c->digitado[strcspn(c->digitado, "\n\r")] = '\0';
     sscanf(c->digitado, "%[^ ] %[^ ]", c->com, c->arg);
