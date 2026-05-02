@@ -1,6 +1,6 @@
 # C File System Simulator 📂
 
-This project is an in-memory file system simulator developed in C. It uses an **N-ary Tree** data structure (specifically the "First Child / Next Sibling" representation) to manage directories and files hierarchically.
+This project is an in-memory file system simulator developed in C. It uses an **N-ary Tree** data structure to manage directories and files hierarchically.
 
 The system allows you to navigate through folders, create new files/directories, list contents, and perform safe deletions with proper dynamic memory management.
 
@@ -25,7 +25,7 @@ The system runs in an interactive terminal loop. The following commands are avai
 The source code has been modularized for better organization:
 
 *   **`main.c`**: Contains the main execution loop, command reading, and user interface.
-*   **`tree.c`** *(and its header, if applicable)*: Contains the data structure logic, memory allocation/deallocation, and tree manipulation functions (insert, search, delete).
+*   **`tree.c`**: Contains the data structure logic, memory allocation/deallocation, and tree manipulation functions (insert, search, delete).
 
 ---
 
@@ -37,4 +37,4 @@ To compile the project, you will need **GCC** installed on your machine.
 
 Open the terminal in the project root and run:
 ```bash
-gcc main.c tree.c -o programa.exe
+gcc main.c tree.c -o program.exe
